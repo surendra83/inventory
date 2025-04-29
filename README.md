@@ -18,7 +18,7 @@ Indivisualt  Module API has own Data base It's Indepnedent
 
 ### Run Appliation
 
-Clone project form git repository git@github.com:surendra83/inventory.git
+Clone project form git repository from [git@github.com:surendra83/inventory.git](https://github.com/surendra83/inventory)
 
 ```Ruby
 cd nventory
