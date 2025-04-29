@@ -15,3 +15,13 @@
      - jwt
      - bcrypt
      - rack
+
+     ### Run Appliation
+     
+     Clone project form git repository git@github.com:surendra83/inventory.git
+
+     cd nventory
+
+     $nventory> bundle install
+     
+     $nventory> rackup
