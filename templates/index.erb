@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List of Product </title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    table { border-collapse: collapse; width: 60%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h1 style="width:80%; margin: auto">List of Prodcut</h1>
+  <table style="width:80%; margin: auto">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Quantity </th>
+      <th>Price</th>
+    </tr>
+    <% @parts.each do |item| %>
+      <tr>
+        <td><%= item[:name] %></td>
+        <td><%= item[:description] %></td>
+        <td><%= item[:quantity] %></td>
+        <td><%= item[:price] %></td>
+      </tr>
+    <% end %>
+  </table>
+</body>
+</html>

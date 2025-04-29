@@ -1,0 +1,81 @@
+openapi: 3.0.0
+info:
+  title: Mobile Inventory API
+  version: "1.0"
+servers:
+  - url: http://localhost:9292/api/v1
+paths:
+  /parts:
+    get:
+      summary: List all parts
+      responses:
+        '200':
+          description: Successful response
+    post:
+      summary: Create a new part
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Part'
+      responses:
+        '201':
+          description: Created
+  /parts/{id}:
+    get:
+      summary: Get a part by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Found
+        '404':
+          description: Not found
+    put:
+      summary: Update a part
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Part'
+      responses:
+        '200':
+          description: Updated
+    delete:
+      summary: Delete a part
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Deleted
+
+components:
+  schemas:
+    Part:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        quantity:
+          type: integer
+        price:
+          type: number
+          
