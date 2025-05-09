@@ -44,15 +44,17 @@ Database Toolkit for Ruby Interation to Database
 Clone project form git repository from [git@github.com:surendra83/inventory.git](https://github.com/surendra83/inventory)
 
 ```Ruby
-cd nventory
+cd inventory
 
-$nventory> bundle install
+$inventory> bundle install
 
-$nventory> rackup
+$inventory> rackup
 
 ```
 ## Test in Browser
 http://localhost:9292/api-docs
+
+![swagger doc](./templates/images/screen.png)
 
 ## view the product list
 http://localhost:9292/view/part 
